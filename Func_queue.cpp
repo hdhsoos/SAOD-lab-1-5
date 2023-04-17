@@ -1,5 +1,4 @@
 #include "Queue.h"
-#include <iostream>
 using namespace std;
 
 bool isEmpty(Queue q) {
@@ -10,7 +9,6 @@ bool isFull(Queue q) {
     return q.count >= MAX_SIZE;
 }
 
-// Функция для добавления элемента в конец очереди
 void add(Queue *q, int data) {
     if (isFull(*q)) {
         cout << "Очередь переполнена" << endl;
@@ -24,12 +22,10 @@ void add(Queue *q, int data) {
     }
 }
 
-// Функция для удаления элемента из начала очереди
 int remove(Queue *q) {
     int del = -1;
     if (isEmpty(*q)) {
-        cout << "Очередь пуста" << endl;
-        
+        cout << "Очередь пуста" << endl; 
     }
     else {
         del = q->data[q->front];
@@ -40,7 +36,6 @@ int remove(Queue *q) {
     return del;
 }
 
-// Функция для вывода текущего состояния очереди на экран
 void display(Queue q) {
     if (isEmpty(q)) {
         cout << "Очередь пуста" << endl;

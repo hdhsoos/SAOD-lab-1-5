@@ -1,5 +1,4 @@
 ﻿#include "Queue.h"
-#include <iostream>
 using namespace std;
 
 int main() {
@@ -14,6 +13,7 @@ int main() {
         cout << "4. Удалить элемент из начала очереди" << endl;
         cout << "5. Вывод очереди на экран" << endl;
         cout << "6. Выход" << endl;
+        cout << "Выберите действие: ";
         cin >> choice;
         cout << "\n";
         switch (choice) {
@@ -38,7 +38,7 @@ int main() {
         case '3':
             if (!isFull(q)) {
                 cout << "Введите значение нового элемента: ";
-               cin >> data;
+                cin >> data;
             }
             add(&q, data);
             cout << "\n";

@@ -3,7 +3,6 @@
 
 const int MAX_SIZE = 3;
 
-// структура очереди
 struct Queue {
 	int data[MAX_SIZE];
 	int front=0; 
